@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= item ? 'Edit' : 'Create' %> Item</title>
+</head>
+<body>
+    <h1><%= item ? 'Edit' : 'Create' %> Item</h1>
+    <form action="<%= item ? '/edit/' + item.id : '/create' %>" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= item ? item.name : '' %>" required>
+        <button type="submit"><%= item ? 'Update' : 'Create' %></button>
+    </form>
+    <a href="/">Back to List</a>
+</body>
+</html>
